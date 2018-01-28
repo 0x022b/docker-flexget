@@ -1,8 +1,12 @@
-# docker-template
+# docker-flexget
 
-A minimal and secure [Alpine Linux][alpine] based [Docker][docker] image.
+A minimal and secure [Alpine Linux][alpine] based [Docker][docker] image with
+[FlexGet][flexget] and [transmissionrpc][rpcplugin] plugin.
 
 ## Configuration
+
+To learn how to get started with FlexGet see the official
+[documention][flexget-conf].
 
 ### Host user mapping
 
@@ -34,4 +38,7 @@ This project is licensed under the MIT License.
 
 [alpine]: https://alpinelinux.org/
 [docker]: https://www.docker.com/
+[flexget]: http://flexget.com/
+[rpcplugin]: https://bitbucket.org/blueluna/transmissionrpc/wiki/Home
+[flexget-conf]: https://flexget.com/Configuration
 [docker-logs]: https://docs.docker.com/engine/reference/commandline/logs/

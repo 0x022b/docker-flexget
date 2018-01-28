@@ -1,11 +1,10 @@
 version: "2.2"
 
 services:
-  template:
-    image: "0x022b/template"
+  flexget:
+    image: "0x022b/flexget"
     init: true
     restart: "on-failure"
-    network_mode: "none"
     cap_drop:
       - "ALL"
     cap_add:
