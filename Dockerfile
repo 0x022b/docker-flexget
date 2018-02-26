@@ -18,6 +18,7 @@ apk add --no-cache \
 pip install --no-cache-dir --upgrade pip \
 	'flexget<2.13' \
 	'transmissionrpc==0.11' && \
+ln -s /etc/TZ /etc/timezone && \
 mkdir -m 0777 -p "${VOLUME}"
 
 VOLUME ["${VOLUME}"]
