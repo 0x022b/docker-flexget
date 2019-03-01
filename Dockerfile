@@ -11,9 +11,9 @@ apk add --no-cache \
     ca-certificates \
     iptables \
     ip6tables \
-    py2-pip \
+    py3-pip \
     su-exec && \
-pip install --no-cache-dir --upgrade pip \
+pip3 install --no-cache-dir --upgrade pip \
     'flexget<2.20' \
     'transmissionrpc' && \
 ln -s /etc/TZ /etc/timezone
