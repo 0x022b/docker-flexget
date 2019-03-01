@@ -15,7 +15,7 @@ apk add --no-cache \
     su-exec && \
 pip install --no-cache-dir --upgrade pip \
     'flexget<2.20' \
-    'transmissionrpc==0.11' && \
+    'transmissionrpc' && \
 ln -s /etc/TZ /etc/timezone
 
 COPY rootfs/ /
