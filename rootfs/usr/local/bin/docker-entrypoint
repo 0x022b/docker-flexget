@@ -46,7 +46,8 @@ if '/sbin/ip' -6 route | '/bin/grep' -q $; then
 fi
 
 if [ "$1" == 'container-daemon' ]; then
-    set -- '/usr/bin/flexget' -c '/app/config.yml' -l '/dev/null' daemon start
+    set -- '/usr/bin/flexget' -c '/app/config.yml' -l '/dev/null' daemon start \
+        --autoreload-config
 fi
 
 exec '/sbin/su-exec' "${uid}:${gid}" "$@"
