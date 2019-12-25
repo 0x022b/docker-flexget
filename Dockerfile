@@ -11,11 +11,18 @@ apk add --no-cache \
     ca-certificates \
     iptables \
     ip6tables \
+    libcurl \
     py3-pip \
     su-exec && \
-pip3 install --no-cache-dir --upgrade pip \
-    'flexget<2.20' \
-    'transmissionrpc' && \
+apk add --no-cache --virtual pycurl-build \
+    build-base \
+    curl-dev \
+    python3-dev && \
+pip3 install --no-cache-dir --disable-pip-version-check \
+    'flexget<2.21' \
+    'pycurl' \
+    'transmissionrpc-ng' && \
+apk del --no-cache pycurl-build && \
 ln -s /etc/TZ /etc/timezone
 
 COPY rootfs/ /
