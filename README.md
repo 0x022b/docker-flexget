@@ -32,6 +32,6 @@ This project is licensed under the MIT License.
 [alpine]: https://alpinelinux.org/
 [docker]: https://www.docker.com/
 [flexget]: http://flexget.com/
-[rpcplugin]: https://bitbucket.org/blueluna/transmissionrpc/wiki/Home
+[rpcplugin]: https://github.com/0x022b/transmissionrpc-ng
 [flexget-conf]: https://flexget.com/Configuration
 [docker-logs]: https://docs.docker.com/engine/reference/commandline/logs/
