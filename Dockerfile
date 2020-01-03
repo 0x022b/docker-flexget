@@ -1,7 +1,7 @@
 FROM alpine:3.11
 LABEL maintainer="Janne K <0x022b@gmail.com>"
 
-ENTRYPOINT ["docker-entrypoint"]
+ENTRYPOINT ["/sbin/tini", "--", "/usr/local/bin/container-entrypoint"]
 CMD ["container-daemon"]
 VOLUME ["/app"]
 
@@ -13,7 +13,8 @@ apk add --no-cache \
     ip6tables \
     libcurl \
     py3-pip \
-    su-exec && \
+    su-exec \
+    tini && \
 apk add --no-cache --virtual pycurl-build \
     build-base \
     curl-dev \

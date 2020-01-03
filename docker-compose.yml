@@ -3,7 +3,6 @@ version: '2.2'
 services:
   flexget:
     image: 0x022b/flexget
-    init: true
     restart: on-failure
     cap_drop:
       - ALL
