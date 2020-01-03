@@ -48,7 +48,7 @@ if [ -n "$(ip -6 route | head -c 1)" ]; then
 fi
 
 if [ "$1" = 'container-daemon' ]; then
-    set -- '/usr/bin/flexget' -c '/app/config.yml' -l '/dev/null' daemon start \
+    set -- flexget -c '/app/config.yml' -l '/dev/null' daemon start \
         --autoreload-config
 fi
 
