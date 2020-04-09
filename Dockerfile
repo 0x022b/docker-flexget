@@ -22,9 +22,10 @@ apk add --no-cache \
 apk add --no-cache --virtual pycurl-build \
     build-base \
     curl-dev \
+    jpeg-dev \
     python3-dev && \
 pip3 install --no-cache-dir --disable-pip-version-check \
-    'flexget<3.1' \
+    'flexget<3.2' \
     'pycurl' \
     'transmissionrpc-ng' && \
 apk del --no-cache pycurl-build && \
