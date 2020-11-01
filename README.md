@@ -1,4 +1,4 @@
-# docker-flexget
+# FlexGet container image
 
 ![Docker Build Status](https://img.shields.io/docker/cloud/build/0x022b/flexget?style=flat-square)
 ![Docker Image Version](https://img.shields.io/docker/v/0x022b/flexget?sort=semver&style=flat-square)
@@ -28,8 +28,7 @@ All IPv6 traffic is blocked.
 
 ## Configuration
 
-To learn how to get started with FlexGet see the official
-[documention][flexget-conf].
+To learn how to get started with FlexGet see the official [documention][flexget-conf].
 
 ### Host user mapping
 
@@ -54,8 +53,8 @@ This project is licensed under the MIT License.
 
 [alpine]: https://alpinelinux.org/
 [docker]: https://www.docker.com/
-[flexget]: http://flexget.com/
-[rpcplugin]: https://github.com/0x022b/transmissionrpc-ng
-[flexget-conf]: https://flexget.com/Configuration
 [docker-logs]: https://docs.docker.com/engine/reference/commandline/logs/
+[flexget]: http://flexget.com/
+[flexget-conf]: https://flexget.com/Configuration
+[rpcplugin]: https://github.com/0x022b/transmissionrpc-ng
 [tini]: https://github.com/krallin/tini
