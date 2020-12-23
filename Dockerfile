@@ -21,7 +21,7 @@ apk add --no-cache \
     python3 && \
 python3 -m ensurepip && \
 python3 -m pip install --upgrade pip wheel && \
-apk add --no-cache --virtual pycurl-build \
+apk add --no-cache --virtual build-deps \
     build-base \
     curl-dev \
     jpeg-dev \
@@ -31,7 +31,7 @@ python3 -m pip install --no-cache-dir \
     'pycurl' \
     'transmissionrpc-ng' && \
 python3 -m pip uninstall --yes pip wheel && \
-apk del --no-cache pycurl-build && \
+apk del --no-cache build-deps && \
 ln -s /etc/TZ /etc/timezone
 
 COPY rootfs/ /
