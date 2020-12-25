@@ -18,17 +18,20 @@ VOLUME ["/app"]
 RUN \
 apk add --no-cache \
     libcurl \
-    py3-pip && \
-apk add --no-cache --virtual pycurl-build \
+    python3 && \
+python3 -m ensurepip && \
+python3 -m pip install --upgrade pip wheel && \
+apk add --no-cache --virtual build-deps \
     build-base \
     curl-dev \
     jpeg-dev \
     python3-dev && \
-pip3 install --no-cache-dir --disable-pip-version-check \
+python3 -m pip install --no-cache-dir \
     'flexget<3.2' \
     'pycurl' \
     'transmissionrpc-ng' && \
-apk del --no-cache pycurl-build && \
+python3 -m pip uninstall --yes pip wheel && \
+apk del --no-cache build-deps && \
 ln -s /etc/TZ /etc/timezone
 
 COPY rootfs/ /
