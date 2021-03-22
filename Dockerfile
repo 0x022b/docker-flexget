@@ -35,7 +35,6 @@ python3 -m pip install --no-cache-dir \
     'pycurl' \
     'transmissionrpc-ng' && \
 python3 -m pip uninstall --yes pip wheel && \
-apk del --no-cache build-deps && \
-ln -s /etc/TZ /etc/timezone
+apk del --no-cache build-deps
 
 COPY rootfs/ /
