@@ -19,6 +19,7 @@ VOLUME ["/app"]
 RUN \
 apk add --no-cache \
     libcurl \
+    libstdc++ \
     python3 && \
 python3 -m ensurepip && \
 python3 -m pip install --upgrade pip wheel && \
