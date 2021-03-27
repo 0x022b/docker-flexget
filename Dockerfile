@@ -35,6 +35,7 @@ python3 -m pip install --no-cache-dir \
     'pycurl' \
     'transmissionrpc-ng' && \
 python3 -m pip uninstall --no-cache-dir --yes pip wheel && \
-apk del --no-cache build-deps
+apk del --no-cache build-deps && \
+rm -rf /root/.cache
 
 COPY rootfs/ /
