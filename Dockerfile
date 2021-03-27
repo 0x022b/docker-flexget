@@ -24,7 +24,7 @@ apk add --no-cache \
     libstdc++ \
     python3 && \
 python3 -m ensurepip && \
-python3 -m pip install --upgrade pip wheel && \
+python3 -m pip install --no-cache-dir --upgrade pip wheel && \
 apk add --no-cache --virtual build-deps \
     build-base \
     curl-dev \
@@ -34,7 +34,7 @@ python3 -m pip install --no-cache-dir \
     'flexget<3.2' \
     'pycurl' \
     'transmissionrpc-ng' && \
-python3 -m pip uninstall --yes pip wheel && \
+python3 -m pip uninstall --no-cache-dir --yes pip wheel && \
 apk del --no-cache build-deps
 
 COPY rootfs/ /
