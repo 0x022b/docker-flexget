@@ -29,6 +29,7 @@ apk add --no-cache --virtual build-deps \
     build-base \
     curl-dev \
     jpeg-dev \
+    linux-headers \
     python3-dev && \
 python3 -m pip install --no-cache-dir \
     'flexget<3.2' \
