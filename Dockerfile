@@ -1,4 +1,4 @@
-FROM alpine:3.13
+FROM alpine:3.14
 LABEL maintainer="Janne K <0x022b@gmail.com>"
 
 ENTRYPOINT ["/sbin/tini", "-g", "--", "/usr/local/bin/container-entrypoint"]
@@ -29,10 +29,12 @@ apk add --no-cache --virtual build-deps \
     build-base \
     curl-dev \
     jpeg-dev \
+    linux-headers \
     python3-dev && \
 python3 -m pip install --no-cache-dir \
     'flexget<3.2' \
     'pycurl' \
+    'transmission-rpc' \
     'transmissionrpc-ng' && \
 python3 -m pip uninstall --no-cache-dir --yes pip wheel && \
 apk del --no-cache build-deps && \
