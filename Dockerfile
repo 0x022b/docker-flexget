@@ -34,6 +34,7 @@ apk add --no-cache --virtual build-deps \
 python3 -m pip install --no-cache-dir \
     'flexget<3.2' \
     'pycurl' \
+    'transmission-rpc' \
     'transmissionrpc-ng' && \
 python3 -m pip uninstall --no-cache-dir --yes pip wheel && \
 apk del --no-cache build-deps && \
